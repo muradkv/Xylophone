@@ -12,6 +12,13 @@
 		FABCF4C922359C64002C1921 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABCF4C722359C64002C1921 /* Main.storyboard */; };
 		FABCF4CB22359C65002C1921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABCF4CA22359C65002C1921 /* Assets.xcassets */; };
 		FABCF4CE22359C65002C1921 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABCF4CC22359C65002C1921 /* LaunchScreen.storyboard */; };
+		FABCF4EB2235A1D1002C1921 /* note7.wav in Resources */ = {isa = PBXBuildFile; fileRef = FABCF4E42235A1D1002C1921 /* note7.wav */; };
+		FABCF4EC2235A1D1002C1921 /* note5.wav in Resources */ = {isa = PBXBuildFile; fileRef = FABCF4E52235A1D1002C1921 /* note5.wav */; };
+		FABCF4ED2235A1D1002C1921 /* note2.wav in Resources */ = {isa = PBXBuildFile; fileRef = FABCF4E62235A1D1002C1921 /* note2.wav */; };
+		FABCF4EE2235A1D1002C1921 /* note3.wav in Resources */ = {isa = PBXBuildFile; fileRef = FABCF4E72235A1D1002C1921 /* note3.wav */; };
+		FABCF4EF2235A1D1002C1921 /* note1.wav in Resources */ = {isa = PBXBuildFile; fileRef = FABCF4E82235A1D1002C1921 /* note1.wav */; };
+		FABCF4F02235A1D1002C1921 /* note6.wav in Resources */ = {isa = PBXBuildFile; fileRef = FABCF4E92235A1D1002C1921 /* note6.wav */; };
+		FABCF4F12235A1D1002C1921 /* note4.wav in Resources */ = {isa = PBXBuildFile; fileRef = FABCF4EA2235A1D1002C1921 /* note4.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		FABCF4CA22359C65002C1921 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FABCF4CD22359C65002C1921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FABCF4CF22359C65002C1921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FABCF4E42235A1D1002C1921 /* note7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note7.wav; sourceTree = "<group>"; };
+		FABCF4E52235A1D1002C1921 /* note5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note5.wav; sourceTree = "<group>"; };
+		FABCF4E62235A1D1002C1921 /* note2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note2.wav; sourceTree = "<group>"; };
+		FABCF4E72235A1D1002C1921 /* note3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note3.wav; sourceTree = "<group>"; };
+		FABCF4E82235A1D1002C1921 /* note1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note1.wav; sourceTree = "<group>"; };
+		FABCF4E92235A1D1002C1921 /* note6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note6.wav; sourceTree = "<group>"; };
+		FABCF4EA2235A1D1002C1921 /* note4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note4.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +72,25 @@
 				FABCF4C522359C64002C1921 /* ViewController.swift */,
 				FABCF4C722359C64002C1921 /* Main.storyboard */,
 				FABCF4CA22359C65002C1921 /* Assets.xcassets */,
+				FABCF4D52235A03C002C1921 /* Sound Files */,
 				FABCF4CC22359C65002C1921 /* LaunchScreen.storyboard */,
 				FABCF4CF22359C65002C1921 /* Info.plist */,
 			);
 			path = Xylophone;
+			sourceTree = "<group>";
+		};
+		FABCF4D52235A03C002C1921 /* Sound Files */ = {
+			isa = PBXGroup;
+			children = (
+				FABCF4E82235A1D1002C1921 /* note1.wav */,
+				FABCF4E62235A1D1002C1921 /* note2.wav */,
+				FABCF4E72235A1D1002C1921 /* note3.wav */,
+				FABCF4EA2235A1D1002C1921 /* note4.wav */,
+				FABCF4E52235A1D1002C1921 /* note5.wav */,
+				FABCF4E92235A1D1002C1921 /* note6.wav */,
+				FABCF4E42235A1D1002C1921 /* note7.wav */,
+			);
+			path = "Sound Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,8 +151,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABCF4F02235A1D1002C1921 /* note6.wav in Resources */,
+				FABCF4EC2235A1D1002C1921 /* note5.wav in Resources */,
 				FABCF4CE22359C65002C1921 /* LaunchScreen.storyboard in Resources */,
 				FABCF4CB22359C65002C1921 /* Assets.xcassets in Resources */,
+				FABCF4ED2235A1D1002C1921 /* note2.wav in Resources */,
+				FABCF4EF2235A1D1002C1921 /* note1.wav in Resources */,
+				FABCF4EB2235A1D1002C1921 /* note7.wav in Resources */,
+				FABCF4F12235A1D1002C1921 /* note4.wav in Resources */,
+				FABCF4EE2235A1D1002C1921 /* note3.wav in Resources */,
 				FABCF4C922359C64002C1921 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +328,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.murad.Xylophone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -310,7 +346,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.murad.Xylophone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
