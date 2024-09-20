@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         stackView.axis = .vertical
         stackView.spacing = 8
         stackView.distribution = .fillEqually
+        stackView.alignment = .center
         return stackView
     }()
     
@@ -46,31 +47,23 @@ class ViewController: UIViewController {
     }
     
     private func setupButtons() {
+        
         var spaceConstraintEdgeButton: CGFloat = 5
         
         for key in XylophoneData.keys {
             let button = CustomButton(backgroundColor: key.color, title: key.title)
-            let containerView = setupContainerView()
             
-            mainVerticalStackView.addArrangedSubview(containerView)
-            containerView.addSubview(button)
+            mainVerticalStackView.addArrangedSubview(button)
+            
+            let buttonWidth = view.bounds.width - (spaceConstraintEdgeButton * 2)
             
             NSLayoutConstraint.activate([
-                button.topAnchor.constraint(equalTo: containerView.topAnchor),
-                button.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: spaceConstraintEdgeButton),
-                button.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -spaceConstraintEdgeButton),
-                button.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
+                button.widthAnchor.constraint(equalToConstant: buttonWidth)
             ])
             
             spaceConstraintEdgeButton += 5
         }
     }
     
-    private func setupContainerView() -> UIView {
-        let uiView = UIView()
-        uiView.backgroundColor = .systemBackground
-        uiView.translatesAutoresizingMaskIntoConstraints = false
-        return uiView
-    }
 }
 
