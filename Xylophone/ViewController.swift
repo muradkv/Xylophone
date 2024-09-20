@@ -55,10 +55,9 @@ class ViewController: UIViewController {
             
             mainVerticalStackView.addArrangedSubview(button)
             
-            let buttonWidth = view.bounds.width - (spaceConstraintEdgeButton * 2)
-            
             NSLayoutConstraint.activate([
-                button.widthAnchor.constraint(equalToConstant: buttonWidth)
+                button.leadingAnchor.constraint(equalTo: mainVerticalStackView.leadingAnchor, constant: spaceConstraintEdgeButton),
+                button.trailingAnchor.constraint(equalTo: mainVerticalStackView.trailingAnchor, constant: -spaceConstraintEdgeButton)
             ])
             
             spaceConstraintEdgeButton += 5
