@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -20,6 +21,8 @@ class ViewController: UIViewController {
         stackView.alignment = .center
         return stackView
     }()
+    
+    var player: AVAudioPlayer?
     
     //MARK: - LifeCycle
     
@@ -60,7 +63,28 @@ class ViewController: UIViewController {
                 button.trailingAnchor.constraint(equalTo: mainVerticalStackView.trailingAnchor, constant: -spaceConstraintEdgeButton)
             ])
             
+            button.addTarget(self, action: #selector(playSound), for: .touchUpInside)
+            
             spaceConstraintEdgeButton += 5
+        }
+    }
+    
+    //MARK: - Methods
+    
+    @objc private func playSound(sender: UIButton) {
+        guard let titleButton = sender.titleLabel?.text else { return }
+        guard let path = Bundle.main.path(forResource: titleButton, ofType:"wav") else { return }
+        let url = URL(fileURLWithPath: path)
+
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            player = try AVAudioPlayer(contentsOf: url)
+            player?.play()
+            
+        } catch let error {
+            print(error.localizedDescription)
         }
     }
     
