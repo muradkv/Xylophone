@@ -72,6 +72,10 @@ class ViewController: UIViewController {
     //MARK: - Methods
     
     @objc private func playSound(sender: UIButton) {
+        if let customButton = sender as? CustomButton {
+            customButton.animateButton()
+        }
+        
         guard let titleButton = sender.titleLabel?.text else { return }
         guard let path = Bundle.main.path(forResource: titleButton, ofType:"wav") else { return }
         let url = URL(fileURLWithPath: path)

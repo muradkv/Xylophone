@@ -29,4 +29,11 @@ class CustomButton: UIButton {
         layer.cornerRadius = 10
         titleLabel?.font = UIFont.systemFont(ofSize: 40)
     }
+    
+    func animateButton() {
+        alpha = 0.5
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            self.alpha = 1
+        }
+    }
 }
